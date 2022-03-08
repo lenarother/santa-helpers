@@ -72,7 +72,7 @@ def get_target_point(start: Tuple[int, int], steps: str) -> Tuple[int, int]:
     return x + n * dx, y + n * dy
 
 
-def path_points_generator(start, steps):
+def path_points(start, steps):
     """Generate coordinates of each path point based on start point and steps.
 
     Args:

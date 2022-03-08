@@ -3,7 +3,7 @@ import pytest
 from santa_helpers.paths import (
     get_direction,
     get_target_point,
-    path_points_generator,
+    path_points,
 )
 
 
@@ -60,4 +60,4 @@ def test_get_target_point(start, direction, target):
     )
 )
 def test_path_points_generator(start, direction, expected):
-    assert list(path_points_generator(start, direction)) == expected
+    assert list(path_points(start, direction)) == expected
