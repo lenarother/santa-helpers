@@ -13,7 +13,6 @@ santa-helpers
         :target: https://santa-helpers.readthedocs.io/en/latest/?version=latest
         :alt: Documentation Status
 
-
 .. image:: https://pyup.io/repos/github/lenarother/santa_helpers/shield.svg
      :target: https://pyup.io/repos/github/lenarother/santa_helpers/
      :alt: Updates
@@ -30,7 +29,47 @@ Helpers for Advent of Codee
 Features
 --------
 
-* TODO
+* Calculate manhattan distance
+
+    .. code-block:: python
+
+        >>> distances.manhattan((-3, 1), (0, 0))
+
+        4
+
+* Generate neighbors
+
+    .. code-block:: python
+
+        >>> list(neighbors.neighbors((1, 1)))
+
+        [(1, 0), (0, 1), (2, 1), (1, 2)]
+
+        >>> list(neighbors.neighbors((1, 1), 8))
+
+        [
+            (0, 0),
+            (1, 0),
+            (2, 0),
+            (0, 1),
+            (2, 1),
+            (0, 2),
+            (1, 2),
+            (2, 2)
+        ]
+
+        >>> list(neighbors.neighbors((1, 1), p_min=(1, 1)))
+
+        [(2, 1), (1, 2)]
+
+* Generate points in path
+
+    .. code-block:: python
+
+        >>> list(paths.path_points((0, 0), 'R2'))
+
+        [(1, 0), (2, 0)]
+
 
 Credits
 -------
